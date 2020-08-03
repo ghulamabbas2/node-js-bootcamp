@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>File Uploads</title>
+</head>
+ 
+<body>
+
+
+    <div class="container w-50">
+        <h1 class="text-center my-4">Upload Images Here</h1>
+        <!--  SINGLE FILE -->
+        <h3 class="mt-5 mb-2">Single Upload</h3>
+        <div class="custom-file">
+            <form class="form-control" action="/uploadSingle" enctype="multipart/form-data" method="POST">
+                <input name="singleImage" type="file" class="custom-file-input"">
+                <label class=" custom-file-label" for="customFile">Choose Image</label>
+                <input class="btn btn-success btn-block my-2" type="submit" value="Upload Image" />
+            </form>
+        </div>
+
+        <!--  MULTIPLE FILE -->
+        <h3 class="mt-5 mb-2">Multiple Uploads</h3>
+        <div class="custom-file">
+            <form class="form-control" action="/uploadmultiple" enctype="multipart/form-data" method="POST">
+                <input name="multipleImages" type="file" class="custom-file-input"" multiple>
+                <label class=" custom-file-label" for="customFile">Choose Image</label>
+                <input class="btn btn-danger btn-block my-2" type="submit" value="Upload Multiple Images" />
+            </form>
+        </div>
+
+     </div>  
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<%- include('partials/header') -%>
+
+<h1 class="text-center mt-5 mb-3">Register</h1>
+<div class="container w-25">
+    <%- include('partials/messages') -%>
+    <form action="/signup" method="POST">
+
+        <div class="form-group px-0">
+            <input type="text" name="name" class="form-control" placeholder="Name">
+        </div>
+
+        <div class="form-group px-0">
+            <input type="email" name="email" class="form-control" placeholder="Email Address">
+        </div>
+
+        <div class="form-group px-0">
+            <input type="password" name="password" class="form-control" placeholder="Password">
+        </div>
+
+        <button type="submit" class="btn btn-danger btn-block">Register</button>
+    </form>
+    <a href="/login">Back to Login</a>
+</div>
+
+
+</div>
+
+<%- include('partials/footer') -%>

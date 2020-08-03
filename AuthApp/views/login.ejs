@@ -1,0 +1,26 @@
+<%- include('partials/header') -%>
+<h1 class="text-center mt-5 mb-3">Login</h1>
+<div class="container w-25">
+    <%- include('partials/messages') -%>
+    <form action="/login" method="POST">
+
+        <div class="form-group px-0">
+            <input type="email" name="email" class="form-control" placeholder="Email Address">
+        </div>
+
+        <div class="form-group px-0">
+            <input type="password" name="password" class="form-control" placeholder="Password">
+        </div>
+
+        <a class="float-right mt-0 mb-3 text-danger" href="/forgot">Forgot Password?</a>
+
+        <button type="submit" class="btn btn-danger btn-block">Login</button>
+    </form>
+    <p class="text-center my-2"><b>OR</b></p>
+    <a href="/signup" class="btn btn-danger btn-block">Sign Up</a>
+</div>
+
+
+</div>
+
+<%- include('partials/footer') -%>

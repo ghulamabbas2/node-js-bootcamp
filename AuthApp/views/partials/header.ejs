@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Authentication Project</title>
+
+    <link rel="stylesheet" type="text/css" href="../libs/bootstrap.css">
+
+</head>
+
+<body>
+    <nav class="py-1 navbar navbar-expand-lg navbar-light bg-danger">
+        <a class="navbar-brand text-white ml-4" href="/dashboard"><b>Authentication Project</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+            <div class="mr-5">
+                <ul class="navbar-nav mr-auto mr-0">
+                    <% if(currentUser) { %>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><%= currentUser.name %></b></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/password/change">Change Password</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/logout">Logout</a>
+                    </li>
+                    <% } %>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>

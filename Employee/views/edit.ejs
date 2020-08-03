@@ -1,0 +1,21 @@
+<%- include('partials/header') -%>
+
+<div class="container mt-5 w-50">
+
+    <h2 class="mb-4">Update Employee Data</h2>
+
+    <form action="/edit/<%= employee.id %>?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        
+        <input type="text" value="<%= employee.name %>" name="name" class="form-control" placeholder="Employee Name">
+
+        <input type="text" value="<%= employee.designation %>" name="designation" class="form-control" placeholder="Employee Designation">
+
+        <input type="text" value="<%= employee.salary %>" name="salary" class="form-control" placeholder="Employee Salary">
+
+        <button type="submit" class="btn btn-danger btn-block mt-3">Update Employee</button>
+
+    </form>
+</div>
+
+<%- include('partials/footer') -%>
